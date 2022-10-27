@@ -69,7 +69,6 @@ const handleClick = () => {
     })
   }
 
-  {resultado && <p>dale</p>}
   return (
     <form onSubmit={(event) => event.preventDefault()}>
       {perguntas.map((pergunta, index) => (
@@ -81,7 +80,7 @@ const handleClick = () => {
           {...pergunta}
           />
       ))}
-        {resultado ? <p>{resultado}</p> : <button onClick={ handleClick }>Próximo</button>}
+        {resultado ? <p>{ resultado }</p> : <button onClick={ handleClick }>Próximo</button>}
     </form>
   );
 }
